@@ -1,0 +1,16 @@
+Project setup
+---------------
+    - initialize npm in the root folder not in backend folder or frontend
+    - install mango@4 mongoose dotenv
+
+Backend
+    - create file => server.js => which is the entry point of our apis
+    - in order to make the server listening watch whatever change you do, then you need to use
+        -> nodemon package
+    - when adding the shcam you can add createdAt, updatedAt
+        new Schema({//here teh schema}, {timestamps: true})
+
+
+
+connecting to the database
+mongodb+srv://aliabdulbaqi01:0599709635aA@cluster0.b9sz861.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
