@@ -10,7 +10,6 @@ Backend
     - when adding the shcam you can add createdAt, updatedAt
         new Schema({//here teh schema}, {timestamps: true})
 
+    - connecting to the database
+        mongodb+srv://aliabdulbaqi01:0599709635aA@cluster0.b9sz861.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-
-connecting to the database
-mongodb+srv://aliabdulbaqi01:0599709635aA@cluster0.b9sz861.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
