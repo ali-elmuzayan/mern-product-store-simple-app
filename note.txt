@@ -13,3 +13,23 @@ Backend
     - connecting to the database
         mongodb+srv://aliabdulbaqi01:0599709635aA@cluster0.b9sz861.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
+
+
+Frontend
+    - install react
+        => cd .\frontend -> npm create vite@latest . -> react -> javaScript  ->  npm install => npm run dev
+    -> chakra UI
+       => npm i @chakra-ui/react@2 @emotion/react @emotion/styled framer-motion
+       => wrap chakra provider at the root of your app
+    -> for pages
+       => in the frontend  => npm i react-router-dom
+       => wrap app with the  BrowserRouter component
+    -> extensions
+       => ES7 + Reac/Redux/React-native snippets => use this snippet => rafce
+
+
+    -> components we use from chekra
+        => <Box minH={"100vh"}> add the page jsx here </box>
+
+
+
