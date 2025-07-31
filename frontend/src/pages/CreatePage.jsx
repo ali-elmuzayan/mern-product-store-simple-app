@@ -1,12 +1,41 @@
 import React, {useState} from 'react';
-import {Box, Button, Container, Flex, Heading, Input, useColorModeValue, VStack} from "@chakra-ui/react";
+import {Box, Button, Container, Flex, Heading, Input, useColorModeValue, useToast, VStack} from "@chakra-ui/react";
+import {useProductStore} from "../store/product.js";
+
+
+const emptyProduct = {
+    name: '',
+    price: '',
+    img: '',
+}
 
 const CreatePage = () => {
-    const [newProduct, setNewProduct] = useState({name: "", price: "",   image: ""})
+    const [newProduct, setNewProduct] = useState(emptyProduct)
+    const {createProduct} = useProductStore();
+    const toast = useToast()
 
 
-    const handleAddProduct = () => {
-        console.log(newProduct);
+    const handleAddProduct = async () => {
+         const {success, message} = await createProduct(newProduct);
+
+         if (!success) {
+             toast({
+                 title: "Error",
+                 description: message,
+                 status: "error",
+                 duration: 9000,
+                 isClosable: true,
+             })
+         }
+
+         setNewProduct(() => emptyProduct)
+
+         toast({
+             title: "Success",
+             description: message,
+             status: "success",
+             duration: 9000,
+         })
     }
 
     return (
@@ -27,7 +56,7 @@ const CreatePage = () => {
                         placeholder='product Price' name="price" value={newProduct.price} onChange={(e) => setNewProduct({...newProduct, price: e.target.value})}
                     />
                     <Input
-                        placeholder='product Image' name="image" value={newProduct.image} onChange={(e) => setNewProduct({...newProduct, image: e.target.value})}
+                        placeholder='product Image' name="img" value={newProduct.img} onChange={(e) => setNewProduct({...newProduct, img: e.target.value})}
                     />
 
                     <Button colorSchema="blue" onClick={handleAddProduct} w="full"> Create Product</Button>

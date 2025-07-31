@@ -1,5 +1,13 @@
+In this Page:
+--------------
+  => project setup
+  => frontend
+     -> toggle color
+     -> global storage
+  => some notes
+
+
 Project setup
----------------
     - initialize npm in the root folder not in backend folder or frontend
     - install mango@4 mongoose dotenv
 
@@ -34,16 +42,27 @@ Frontend
     -> components we use from chekra
         => <Box minH={"100vh"}> add the page jsx here </box>
 
+    -> notification with chekra toaster
 
 
 
-toggleColor:
-    => useColorMode hooks that provided by chakra UI
-        - will return the current value of the color mode & the handler to toggle
-    => useColorModeValue()
-        - add it to the color style see it will return value in the light and other value in the dark
 
 
 
-Global storage:
-    => we will create a global storage so we can have access it from anywhere of our application
+    toggleColor:
+        => useColorMode hooks that provided by chakra UI
+            - will return the current value of the color mode & the handler to toggle
+        => useColorModeValue()
+            - add it to the color style see it will return value in the light and other value in the dark
+
+
+
+    Global storage:
+        => we will create a global storage so we can have access it from anywhere of our application
+        => using zustand package for that
+
+
+
+Some Notes:
+    => if you have a callback function that is going to return object wrap it with  brackets
+        () => ({})
