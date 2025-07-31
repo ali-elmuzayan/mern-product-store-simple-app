@@ -24,8 +24,11 @@ Frontend
     -> for pages
        => in the frontend  => npm i react-router-dom
        => wrap app with the  BrowserRouter component
+    -> for icons
+        => i react-icons
+        => or you can use chakra UI icons
     -> extensions
-       => ES7 + Reac/Redux/React-native snippets => use this snippet => rafce
+       => ES7 + React/Redux/React-native snippets => use this snippet => rafce
 
 
     -> components we use from chekra
@@ -33,3 +36,14 @@ Frontend
 
 
 
+
+toggleColor:
+    => useColorMode hooks that provided by chakra UI
+        - will return the current value of the color mode & the handler to toggle
+    => useColorModeValue()
+        - add it to the color style see it will return value in the light and other value in the dark
+
+
+
+Global storage:
+    => we will create a global storage so we can have access it from anywhere of our application
